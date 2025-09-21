@@ -1,0 +1,76 @@
+body {
+  font-family: system-ui, Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.chart-container {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 20px;
+  max-width: 1000px;  
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+.axis text {
+  font-size: 10px;
+}
+
+.bar {
+  rx: 3px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.grid-x line {
+  stroke: #ccc;          /* màu xám nhạt */
+  stroke-opacity: 0.3;   /* trong suốt nhẹ */
+  shape-rendering: crispEdges;
+}
+
+.grid-x path {
+  stroke-width: 0;       /* bỏ trục ngang phía dưới */
+}
+.grid-y line {
+  stroke: #ccc;          /* xám nhạt */
+  stroke-opacity: 0.35;  /* mờ nhẹ */
+  shape-rendering: crispEdges;
+}
+.grid-y path {
+  stroke-width: 0;       /* ẩn đường trục dọc */
+}
+
+/* nhãn giá trị 8px cho tất cả chart */
+.val { font-size: 8px; fill: #000; }
+
+body, html { overflow: visible; }
+.chart-container { overflow: visible; }  /* để tooltip không bị cắt */
+#tooltip { position: absolute; z-index: 9999; pointer-events: none; }
